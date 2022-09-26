@@ -2,10 +2,15 @@
 import { RouterLink } from "vue-router";
 </script>
 <template>
-  <header>
-    <nav>
+  <header class="page-header">
+    <nav class="page-nav">
       <RouterLink class="routerlink" to="/">Tab1</RouterLink>
       <RouterLink class="routerlink" to="/tab-2">Tab2</RouterLink>
     </nav>
   </header>
 </template>
+
+<style lang="scss">
+@import "@/assets/styles/_variables.scss";
+@import "./Header.scss";
+</style>

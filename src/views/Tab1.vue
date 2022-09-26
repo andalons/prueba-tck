@@ -7,7 +7,7 @@ const hotelPlans = data;
 </script>
 
 <template>
-  <section class="tab1 main">
+  <section class="tab1 tab-main">
     <h2>Hotel Mieres del Camín Apartamentos</h2>
     <HotelPlanList :hotelPlans="hotelPlans" />
   </section>

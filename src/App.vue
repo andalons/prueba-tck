@@ -1,11 +1,11 @@
 <script setup>
 import { RouterView } from "vue-router";
-import Header from "./components/header/Header.vue";
+import Header from "@/components/header/Header.vue";
 </script>
 
 <template>
   <Header />
-  <RouterView />
+  <main class="page-main"><RouterView /></main>
 </template>
 
 <style scoped></style>
