@@ -5,8 +5,8 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <header>
     <nav>
-      <RouterLink to="/">Tab1</RouterLink>
-      <RouterLink to="/tab-2">Tab2</RouterLink>
+      <RouterLink class="routerlink" to="/">Tab1</RouterLink>
+      <RouterLink class="routerlink" to="/tab-2">Tab2</RouterLink>
     </nav>
   </header>
 
