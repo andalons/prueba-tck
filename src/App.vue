@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from "vue-router";
   <header>
     <nav>
       <RouterLink to="/">Tab1</RouterLink>
-      <RouterLink to="/about">Tab2</RouterLink>
+      <RouterLink to="/tab-2">Tab2</RouterLink>
     </nav>
   </header>
 
