@@ -12,5 +12,5 @@ import { RouterLink } from "vue-router";
 
 <style lang="scss">
 @import "@/assets/styles/_variables.scss";
-@import "./Header.scss";
+@import "./AppHeader.scss";
 </style>
