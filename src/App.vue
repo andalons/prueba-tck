@@ -1,15 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
+import Header from "./components/header/Header.vue";
 </script>
 
 <template>
-  <header>
-    <nav>
-      <RouterLink class="routerlink" to="/">Tab1</RouterLink>
-      <RouterLink class="routerlink" to="/tab-2">Tab2</RouterLink>
-    </nav>
-  </header>
-
+  <Header />
   <RouterView />
 </template>
 
