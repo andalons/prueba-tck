@@ -1,6 +1,5 @@
 <script setup>
 import data from "@/data/hotelPlans.json";
-import { ref } from "vue";
 import HotelPlanList from "../components/tab1/hotel-plan-list/HotelPlanList.vue";
 
 const hotelPlans = data;
