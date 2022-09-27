@@ -1,12 +1,13 @@
 <template>
   <ul>
     <li v-for="plan in hotelPlans" :key="plan.id">
-      <!-- :class="[plan.id === planId ? 'isActive' : '']" -->
       <SelectablePlan
         :description="plan.description"
         :services="plan.services"
         :id="plan.id"
-        @input-id="toggleClass"
+        @onUpdatePlan="updateActivePlan"
+        :class="{ 'active-plan': activePlan === plan.description }"
+        :selectedPlan="selectedPlan"
       />
     </li>
   </ul>
@@ -16,10 +17,10 @@
 import { ref } from "vue";
 import SelectablePlan from "../selectable-plan/SelectablePlan.vue";
 const props = defineProps(["hotelPlans"]);
-let planId = ref(1);
-const toggleClass = (inputId) => {
-  console.log(inputId);
-  planId = inputId;
+const selectedPlan = ref("Solo Alojamiento");
+const activePlan = ref("Solo Alojamiento");
+const updateActivePlan = (plan) => {
+  activePlan.value = plan;
 };
 </script>
 

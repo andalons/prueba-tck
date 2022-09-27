@@ -5,24 +5,23 @@
       <li v-for="service in services">{{ service }}</li>
     </ul>
     <input
-      :id="id"
       type="radio"
-      :value="description"
       name="plans"
+      :value="description"
+      :id="id"
       v-model="selectedPlan"
-      @click="handleInputChange"
+      @click="updateActivePlan"
     />
     <label :for="id">Elegir régimen</label>
   </article>
 </template>
 
 <script setup>
-import { ref, defineEmits } from "vue";
-const emit = defineEmits(["inputId"]);
-const props = defineProps(["description", "services", "id"]);
-const selectedPlan = ref("Solo Alojamiento");
-const handleInputChange = (e) => {
-  emit("inputId", e.target.id);
+import { defineEmits } from "vue";
+const props = defineProps(["description", "services", "id", "selectedPlan"]);
+const emit = defineEmits();
+const updateActivePlan = (e) => {
+  emit("onUpdatePlan", e.target.value);
 };
 </script>
 
