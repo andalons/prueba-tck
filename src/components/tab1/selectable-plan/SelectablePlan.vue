@@ -1,10 +1,16 @@
 <template>
-  <article :id="description" @click="updateSelection">
-    <h3>{{ description }}</h3>
-    <ul>
-      <li v-for="(service, index) in services" :key="index">{{ service }}</li>
+  <article :id="description" @click="updateSelection" class="plan">
+    <h3 class="plan__title">{{ description }}</h3>
+    <ul class="plan__services-list">
+      <li
+        class="service-list-item"
+        v-for="(service, index) in services"
+        :key="index"
+      >
+        {{ service }}
+      </li>
     </ul>
-    <div>
+    <div class="plan__button">
       <input
         type="radio"
         name="plans"

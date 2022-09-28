@@ -1,0 +1,8 @@
+.plan {
+    height: 100%;
+    padding:15px;
+    &__title {
+        text-align: center;
+        color: $subtitles-text-color;
+    }
+}
