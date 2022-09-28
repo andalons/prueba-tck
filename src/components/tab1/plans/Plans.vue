@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li v-for="plan in hotelPlans" :key="plan.id">
+  <ul class="plan-list">
+    <li class="plan-list__item" v-for="plan in hotelPlans" :key="plan.id">
       <SelectablePlan
         :description="plan.description"
         :services="plan.services"

@@ -1,3 +1,15 @@
+.plan-list{
+  &__item {
+    width: 225px;
+    height: 450px;
+    list-style-type: none;
+    margin:7px;
+    background-color: $white-background;
+    border: 1px $border-color solid;
+  }
+}
+
+
 .active-plan {
-    border: 1px solid black;
+    border: 1px solid $border-selected-color;
   }
