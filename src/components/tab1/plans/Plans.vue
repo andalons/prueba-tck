@@ -7,7 +7,9 @@
         :id="plan.id"
         :selected-plan="selectedPlan"
         @onUpdatePlan="updateSelectedPlan"
-        :class="{ 'active-plan': selectedPlan === plan.description }"
+        :class="{
+          'plan-list__item--active-plan': selectedPlan === plan.description,
+        }"
       />
     </li>
   </ul>
