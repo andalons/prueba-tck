@@ -1,18 +1,19 @@
 <template>
-  <article>
+  <article :id="description" @click="updateSelection">
     <h3>{{ description }}</h3>
     <ul>
-      <li v-for="service in services">{{ service }}</li>
+      <li v-for="(service, index) in services" :key="index">{{ service }}</li>
     </ul>
-    <input
-      type="radio"
-      name="plans"
-      :value="description"
-      :id="id"
-      v-model="selectedPlan"
-      @click="updateActivePlan"
-    />
-    <label :for="id">Elegir régimen</label>
+    <div>
+      <input
+        type="radio"
+        name="plans"
+        :value="description"
+        :id="id"
+        v-model="selectedPlan"
+      />
+      <label :for="id">Elegir régimen</label>
+    </div>
   </article>
 </template>
 
@@ -20,8 +21,8 @@
 import { defineEmits } from "vue";
 const props = defineProps(["description", "services", "id", "selectedPlan"]);
 const emit = defineEmits();
-const updateActivePlan = (e) => {
-  emit("onUpdatePlan", e.target.value);
+const updateSelection = (e) => {
+  emit("onUpdatePlan", e.currentTarget.id);
 };
 </script>
 

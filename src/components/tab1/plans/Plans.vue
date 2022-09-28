@@ -5,9 +5,9 @@
         :description="plan.description"
         :services="plan.services"
         :id="plan.id"
-        @onUpdatePlan="updateActivePlan"
-        :class="{ 'active-plan': activePlan === plan.description }"
-        :selectedPlan="selectedPlan"
+        :selected-plan="selectedPlan"
+        @onUpdatePlan="updateSelectedPlan"
+        :class="{ 'active-plan': selectedPlan === plan.description }"
       />
     </li>
   </ul>
@@ -18,9 +18,8 @@ import { ref } from "vue";
 import SelectablePlan from "../selectable-plan/SelectablePlan.vue";
 const props = defineProps(["hotelPlans"]);
 const selectedPlan = ref("Solo Alojamiento");
-const activePlan = ref("Solo Alojamiento");
-const updateActivePlan = (plan) => {
-  activePlan.value = plan;
+const updateSelectedPlan = (plan) => {
+  selectedPlan.value = plan;
 };
 </script>
 
