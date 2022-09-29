@@ -10,7 +10,12 @@
       </ul>
     </div>
 
-    <div class="plan-button">
+    <div
+      class="plan-button"
+      :class="{
+        'plan-button--active-plan': selectedPlan === description,
+      }"
+    >
       <input
         class="plan-button-radio"
         type="radio"

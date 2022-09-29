@@ -41,6 +41,9 @@
     background-color:$button-text-color ;
     display:flex;
     align-items: center;
+    &--active-plan {
+      border: 1px solid $border-selected-color;
+    }
     .plan-button-radio {
         margin-right:10px;
     }
