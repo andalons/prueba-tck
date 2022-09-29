@@ -24,7 +24,7 @@
         :id="id"
         v-model="selectedPlan"
       />
-      <label :for="id">Elegir régimen</label>
+      <label class="plan-button-label" :for="id">Elegir régimen</label>
     </div>
   </article>
 </template>
