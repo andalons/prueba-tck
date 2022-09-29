@@ -1,6 +1,3 @@
-<script setup>
-import { RouterLink } from "vue-router";
-</script>
 <template>
   <header class="page-header">
     <nav class="page-nav">
@@ -9,6 +6,10 @@ import { RouterLink } from "vue-router";
     </nav>
   </header>
 </template>
+
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
 
 <style lang="scss">
 @import "./AppHeader.scss";
