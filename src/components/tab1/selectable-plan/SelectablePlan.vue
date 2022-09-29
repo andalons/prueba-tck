@@ -17,14 +17,14 @@
       }"
     >
       <input
-        class="plan-button-radio"
+        class="plan-button__radio"
         type="radio"
         name="plans"
         :value="description"
         :id="id"
         v-model="selectedPlan"
       />
-      <label class="plan-button-label" :for="id">Elegir régimen</label>
+      <label class="plan-button__label" :for="id">Elegir régimen</label>
     </div>
   </article>
 </template>

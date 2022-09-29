@@ -45,10 +45,10 @@
     &--active-plan {
       border: 1px solid $border-selected-color;
     }
-    .plan-button-radio {
+    &__radio {
         margin-right:10px;
     }
-    .plan-button-label {
+    &__label {
       cursor:inherit;
   }
   }
