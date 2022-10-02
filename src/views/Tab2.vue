@@ -1,7 +1,7 @@
 <template>
   <section class="tab2">
     <h2 class="tab2__title">Bebidas</h2>
-    <BeersList :beers="beersData" />
+    <BeersList class="beers-container" :beers="beersData" />
   </section>
 </template>
 

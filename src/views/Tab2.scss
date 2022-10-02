@@ -1,0 +1,12 @@
+.tab2 {
+    margin: 110px 40px;
+    &__title {
+        color:$secondary-text-color;
+    }
+    .beers-container {
+        margin-top: 70px;
+        background-color:$white-background;
+        border: 1px solid $border-color-grey;
+        padding: 20px;
+    }
+}
