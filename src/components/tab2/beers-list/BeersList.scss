@@ -1,0 +1,12 @@
+.beers-title {
+    color:$secondary-text-color;
+    margin:10px 0;
+}
+
+.beers-list {
+    list-style: none;
+    &__item {
+        margin-top:30px;
+        border: 1px solid $border-color-grey;
+    }
+}

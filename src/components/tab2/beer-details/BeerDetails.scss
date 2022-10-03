@@ -1,0 +1,65 @@
+.beer-details {
+    margin:15px 0;
+    display:flex;
+    height:180px;
+    overflow: scroll;
+    &__img-container {
+        width: 200px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        height:inherit;
+        display: flex;
+        justify-content: center;
+    }
+    &__info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width:100%;
+        padding-right: 80px;
+        .title{
+            font-family: 'Roboto Slab', serif;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color:$primary-text-color;
+        }
+        .description {
+            max-width: 700px;
+            font-size: 14px;
+            line-height: 20px;
+            color:$paragraph-text-color-grey;
+
+        }
+        .pairing{
+            font-family: 'Roboto Slab', serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: $secondary-text-color;
+        }
+    }
+    &__abv-container{
+        position: relative;
+        .abv {
+            width:86px;
+            height:32px;
+            padding-left: 5px;
+            font-family: 'Roboto Slab', serif;
+            font-size: 18px;
+            line-height: 32px;
+            font-weight: 700;
+            position:absolute;
+            right:0;
+            &--low {
+                background-color: $color-low-abv;
+            }
+            &--med {
+                background-color: $color-med-abv;
+            }
+            &--high {
+                background-color: $color-high-abv;
+                color: white;
+            }
+        }
+      
+    }
+}

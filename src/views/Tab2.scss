@@ -1,7 +1,9 @@
 .tab2 {
-    margin: 110px 40px;
+    margin: 110px auto;
+    max-width: 1200px;
     &__title {
         color:$secondary-text-color;
+        margin-left: 20px;
     }
     .beers-container {
         margin-top: 70px;
