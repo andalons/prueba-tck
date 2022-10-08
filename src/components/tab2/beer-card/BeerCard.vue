@@ -1,9 +1,9 @@
 <template>
-  <article class="beer-details">
-    <div class="beer-details__img-container">
+  <article class="beer-card">
+    <div class="beer-card__img-container">
       <img :src="img" :alt="name" class="image" />
     </div>
-    <div class="beer-details__info-container">
+    <div class="beer-card__info-container">
       <div class="top">
         <h3 class="title">{{ name }}</h3>
         <p class="description">{{ description }}</p>
@@ -18,7 +18,7 @@
         </p>
       </div>
     </div>
-    <div class="beer-details__abv-container">
+    <div class="beer-card__abv-container">
       <p class="abv" :class="defineAbvColor(abv)">{{ abv }}</p>
     </div>
   </article>
@@ -33,4 +33,4 @@ function defineAbvColor(abv) {
 }
 </script>
 
-<style lang="scss" src="./BeerDetails.scss"></style>
+<style lang="scss" src="./BeerCard.scss"></style>

@@ -4,7 +4,7 @@
     <!--   <pre>{{ beersData }}</pre> -->
     <ul class="beers-list">
       <li class="beers-list__item" v-for="beer in beersData" :key="beer.id">
-        <BeerDetails
+        <BeerCard
           :img="beer.image_url"
           :name="beer.name"
           :description="beer.description"
@@ -17,9 +17,9 @@
 </template>
 
 <script setup>
-import BeerDetails from "../beer-details/BeerDetails.vue";
 import { useStore } from "vuex";
 import { computed } from "vue";
+import BeerCard from "../beer-card/BeerCard.vue";
 
 const store = useStore();
 const beersData = computed(() => store.state.beersData);
