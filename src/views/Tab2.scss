@@ -1,14 +1,26 @@
 .tab2 {
-    margin: 110px auto;
-    max-width: 1200px;
-    &__title {
-        color:$secondary-text-color;
-        margin-left: 20px;
+  margin: 110px auto;
+  max-width: 1200px;
+  &__header {
+    display:flex;
+    justify-content: space-between;
+    .title {
+      color: $secondary-text-color;
+      margin-left: 20px;
     }
-    .beers-container {
-        margin-top: 70px;
-        background-color:$white-background;
-        border: 1px solid $border-color-grey;
-        padding: 20px;
+    .cart-icon{
+        cursor:pointer;
+        color: $secondary-text-color;
+        font-size: 20px;
+        margin-right:20px;
+        margin-top:7px;
     }
+  }
+
+  .beers-container {
+    margin-top: 70px;
+    background-color: $white-background;
+    border: 1px solid $border-color-grey;
+    padding: 20px;
+  }
 }

@@ -1,0 +1,21 @@
+.shopping-cart-container {
+    margin:20px;
+    padding:20px;
+    background-color: $white-background;
+    text-align: right;
+    .title {
+        margin-bottom: 50px;
+    }
+    .table {
+        width:100%;
+        &__header{
+            height: 40px;
+            vertical-align: top;
+        }
+        &__footer {
+            height: 40px;
+            vertical-align: bottom;
+        }
+        
+    }
+}
