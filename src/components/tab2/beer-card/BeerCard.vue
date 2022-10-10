@@ -1,37 +1,44 @@
 <template>
   <article class="beer-card">
     <div class="beer-card__img-container">
-      <img :src="img" :alt="name" class="image" />
+      <img :src="beer.img" :alt="beer.name" class="image" />
     </div>
     <div class="beer-card__info-container">
       <div class="top">
-        <h3 class="title">{{ name }}</h3>
-        <p class="description">{{ description }}</p>
+        <h3 class="title">{{ beer.name }}</h3>
+        <p class="description">{{ beer.description }}</p>
       </div>
       <div class="bottom">
         <p class="pairing">
           Ideal to pair with:
-          <span v-for="(pairing, index) in pairings" key="index"
-            >{{ pairing }}<span v-if="index < pairings.length - 1">, </span>
+          <span v-for="(pairing, index) in beer.pairings" key="index"
+            >{{ pairing
+            }}<span v-if="index < beer.pairings.length - 1">, </span>
             <span v-else>.</span>
           </span>
         </p>
       </div>
     </div>
     <div class="beer-card__abv-container">
-      <p class="abv" :class="defineAbvColor(abv)">{{ abv }}</p>
-      <button class="btn">Add to cart</button>
+      <p class="abv" :class="defineAbvColor(beer.abv)">{{ beer.abv }}</p>
+      <button class="btn" @click="addItem(beer)">Add to cart</button>
     </div>
   </article>
 </template>
 
 <script setup>
-const props = defineProps(["img", "name", "description", "pairings", "abv"]);
+import { useStore } from "vuex";
+const store = useStore();
+const props = defineProps(["beer"]);
 function defineAbvColor(abv) {
   if (abv <= "5") return "abv--low";
   else if (abv >= "5.1" && abv <= "10") return "abv--med";
   else if (abv > "10") return "abv--high";
 }
+
+const addItem = (item) => {
+  store.dispatch("addItemToCart", item);
+};
 </script>
 
 <style lang="scss" src="./BeerCard.scss"></style>

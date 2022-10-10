@@ -4,13 +4,7 @@
     <!--   <pre>{{ beersData }}</pre> -->
     <ul class="beers-list">
       <li class="beers-list__item" v-for="beer in beersData" :key="beer.id">
-        <BeerCard
-          :img="beer.image_url"
-          :name="beer.name"
-          :description="beer.description"
-          :pairings="beer.food_pairing"
-          :abv="beer.abv"
-        />
+        <BeerCard :beer="beer" />
       </li>
     </ul>
   </section>
