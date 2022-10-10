@@ -39,6 +39,7 @@
     }
     &__abv-container{
         position: relative;
+        width:90px;
         .abv {
             width:86px;
             height:32px;
@@ -58,6 +59,23 @@
             &--high {
                 background-color: $color-high-abv;
                 color: white;
+            }
+        }
+        .btn {
+            cursor:pointer;
+            width:70px;
+            position:absolute;
+            right:15px;
+            bottom: 0;
+            border:2px solid $secondary-text-color;
+            background-color: $white-background;
+            color: $secondary-text-color;
+            padding: 10px;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            &:hover {
+                background-color: $secondary-text-color;
+                color: $white-background;
             }
         }
       

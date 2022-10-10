@@ -20,6 +20,7 @@
     </div>
     <div class="beer-card__abv-container">
       <p class="abv" :class="defineAbvColor(abv)">{{ abv }}</p>
+      <button class="btn">Add to cart</button>
     </div>
   </article>
 </template>
