@@ -8,5 +8,10 @@
     &__item {
         margin-top:30px;
         border: 1px solid $border-color-grey;
+        cursor: pointer;
+        &:hover {
+            background-color: #ebf6ff;
+            border: 1px solid $border-color;
+        }
     }
 }
