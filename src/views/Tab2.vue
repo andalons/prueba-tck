@@ -1,9 +1,6 @@
 <template>
   <section class="tab2">
-    <div class="tab2__header">
-      <h2 class="title">Bebidas</h2>
-      <font-awesome-icon icon="fa-solid fa-cart-shopping" class="cart-icon" />
-    </div>
+    <Tab2Header />
     <ShoppingCart />
     <BeersList class="beers-container" />
   </section>
@@ -14,6 +11,7 @@ import { onMounted } from "vue";
 import { useStore } from "vuex";
 import BeersList from "../components/tab2/beers-list/BeersList.vue";
 import ShoppingCart from "../components/tab2/shopping-cart/ShoppingCart.vue";
+import Tab2Header from "../components/tab2/tab2-header/Tab2Header.vue";
 
 const store = useStore();
 onMounted(async () => {
