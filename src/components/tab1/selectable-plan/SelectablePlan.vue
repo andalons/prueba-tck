@@ -30,7 +30,6 @@
 </template>
 
 <script setup>
-import { defineEmits } from "vue";
 const props = defineProps(["description", "services", "id", "selectedPlan"]);
 const emit = defineEmits();
 const updateSelection = (e) => {
