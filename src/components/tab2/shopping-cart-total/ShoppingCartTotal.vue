@@ -13,7 +13,7 @@ import { useStore } from "vuex";
 import { computed } from "vue";
 const store = useStore();
 
-const totalPrice = computed(() => store.getters.totalPrice);
+const totalPrice = computed(() => store.getters.totalPrice.toFixed(2));
 </script>
 
 <style lang="scss" src="./ShoppingCartTotal.scss"></style>

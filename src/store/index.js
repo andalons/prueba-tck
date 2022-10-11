@@ -13,7 +13,15 @@ export default createStore({
         },
         setShoppingCart(state, payload){
             state.shoppingCart[payload.id] = payload
-        }
+        },
+        increase(state, payload){
+            state.shoppingCart[payload].amount = state.shoppingCart[payload].amount + 1
+        },
+        decrease(state, payload){
+            state.shoppingCart[payload].amount = state.shoppingCart[payload].amount - 1
+            if(state.shoppingCart[payload].amount === 0) {delete state.shoppingCart[payload]}
+            
+        },
     },
     actions: {
         async fetchData({commit}) {
