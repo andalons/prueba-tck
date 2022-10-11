@@ -22,7 +22,7 @@ export default createStore({
             state.shoppingCart[payload].amount = state.shoppingCart[payload].amount - 1
             if(state.shoppingCart[payload].amount === 0) {delete state.shoppingCart[payload]}
         },
-        setShoppingCartToggle (state) {
+        setShoppingCartVisibility (state) {
             state.isShoppingCartActive = !state.isShoppingCartActive
         }
     },
@@ -66,7 +66,7 @@ export default createStore({
             commit ('setDecrement', payload);
           },
           toggleShoppingCart ({commit}) {
-            commit ('setShoppingCartToggle')
+            commit ('setShoppingCartVisibility')
           }
 
     },
