@@ -11,7 +11,7 @@
           <th scope="col" class="">Total</th>
         </tr>
       </thead>
-      <tbody id="items">
+      <tbody class="table__body">
         <ShoppingCartItem v-for="item in items" :key="item.id" :item="item" />
       </tbody>
       <tfoot class="table__footer">

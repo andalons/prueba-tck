@@ -1,14 +1,16 @@
 <template>
-  <tr>
-    <th scope="row">{{ item.id }}</th>
-    <td scope="col">{{ item.name }}</td>
-    <td scope="col">{{ item.price }}</td>
-    <td scope="col" class="amount-col">
+  <tr class="content">
+    <th scope="row" class="content__row">{{ item.id }}</th>
+    <td scope="col" class="content__col">{{ item.name }}</td>
+    <td scope="col" class="content_col">{{ item.price }}</td>
+    <td scope="col" class="content__col amount-col">
       <button class="amount-col__button" @click="decrease(item.id)">-</button>
-      <p>{{ item.amount }}</p>
+      <span class="amount-col__text">{{ item.amount }}</span>
       <button class="amount-col__button" @click="increase(item.id)">+</button>
     </td>
-    <td scope="col">{{ (item.amount * item.price).toFixed(2) }}</td>
+    <td scope="col" class="table-content_col">
+      {{ (item.amount * item.price).toFixed(2) }}
+    </td>
   </tr>
 </template>
 
@@ -18,10 +20,10 @@ const store = useStore();
 const props = defineProps(["item"]);
 
 const increase = (id) => {
-  store.commit("increase", id);
+  store.dispatch("increaseNumberOfItems", id);
 };
 const decrease = (id) => {
-  store.commit("decrease", id);
+  store.dispatch("decreaseNumberOfItems", id);
 };
 </script>
 

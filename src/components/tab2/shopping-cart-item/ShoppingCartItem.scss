@@ -1,7 +1,22 @@
-.amount-col {
-    display:flex;
+.content {
+  .amount-col {
+    display: flex;
     justify-content: flex-end;
+    align-items: center;
     &__button {
-        
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border: 2px $secondary-text-color solid;
+      color: $secondary-text-color;
+      background-color: $white-background;
+      &:hover {
+        background-color: $secondary-text-color;
+        color: $white-background;
+      }
     }
+    &__text {
+      margin: 0px 10px;
+    }
+  }
 }
