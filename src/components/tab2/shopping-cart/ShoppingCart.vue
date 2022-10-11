@@ -1,5 +1,5 @@
 <template>
-  <div class="shopping-cart-container" v-if="isShoppingCartActive">
+  <div class="shopping-cart-container" v-if="isActive">
     <h4 class="title">Shopping Cart</h4>
     <table class="table">
       <thead class="table__header">
@@ -28,8 +28,8 @@ import ShoppingCartItem from "../shopping-cart-item/ShoppingCartItem.vue";
 import ShoppingCartTotal from "../shopping-cart-total/ShoppingCartTotal.vue";
 
 const store = useStore();
-const items = computed(() => store.state.shoppingCart);
-const isShoppingCartActive = computed(() => store.state.isShoppingCartActive);
+const items = computed(() => store.getters.getShoppingCart);
+const isActive = computed(() => store.getters.getShoppingCartVisibility);
 </script>
 
 <style lang="scss" src="./ShoppingCart.scss"></style>

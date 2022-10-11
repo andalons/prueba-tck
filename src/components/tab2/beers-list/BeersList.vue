@@ -16,7 +16,7 @@ import { computed } from "vue";
 import BeerCard from "../beer-card/BeerCard.vue";
 
 const store = useStore();
-const beersData = computed(() => store.state.beersData);
+const beersData = computed(() => store.getters.getBeersData);
 </script>
 
 <style lang="scss" src="./BeersList.scss"></style>
