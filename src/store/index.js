@@ -64,6 +64,9 @@ export default createStore({
     },
     getters: {
         totalPrice(state) {
+            // Object.values obtiene los valores del objeto shopping cart (devuelve un array)
+            // Una vez convertido en array se puede ejecutar sobre este el método reduce. 
+            // return Object.values(state.shoppingCart).reduce((acc, shoppingCart) => acc + shoppingCart.amount * shoppingCart.price, 0)
             return Object.values(state.shoppingCart).reduce((acc, {amount, price}) => acc + amount * price, 0)
           }
     }
