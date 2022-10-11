@@ -15,15 +15,14 @@ export default createStore({
         setShoppingCart(state, payload){
             state.shoppingCart[payload.id] = payload
         },
-        increase(state, payload){
+        setIncrement(state, payload){
             state.shoppingCart[payload].amount = state.shoppingCart[payload].amount + 1
         },
-        decrease(state, payload){
+        setDecrement(state, payload){
             state.shoppingCart[payload].amount = state.shoppingCart[payload].amount - 1
             if(state.shoppingCart[payload].amount === 0) {delete state.shoppingCart[payload]}
-            
         },
-        toggleShoppingCart (state) {
+        setShoppingCartToggle (state) {
             state.isShoppingCartActive = !state.isShoppingCartActive
         }
     },
@@ -60,6 +59,15 @@ export default createStore({
             : item.amount = 1
             commit('setShoppingCart', item)
           },
+          increaseNumberOfItems ({commit}, payload) {
+            commit ('setIncrement', payload);
+          },
+          decreaseNumberOfItems ({commit}, payload) {
+            commit ('setDecrement', payload);
+          },
+          toggleShoppingCart ({commit}) {
+            commit ('setShoppingCartToggle')
+          }
 
     },
     getters: {

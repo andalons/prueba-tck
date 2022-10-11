@@ -13,7 +13,7 @@
 import { useStore } from "vuex";
 const store = useStore();
 
-const toggleShoppingCart = () => store.commit("toggleShoppingCart");
+const toggleShoppingCart = () => store.dispatch("toggleShoppingCart");
 </script>
 
 <style lang="scss" src="./Tab2Header.scss"></style>
