@@ -5,6 +5,7 @@ export default createStore({
         return {
             beersData: [],
             shoppingCart: {},
+            isShoppingCartActive: false,
         }
     },
     mutations:{
@@ -22,6 +23,9 @@ export default createStore({
             if(state.shoppingCart[payload].amount === 0) {delete state.shoppingCart[payload]}
             
         },
+        toggleShoppingCart (state) {
+            state.isShoppingCartActive = !state.isShoppingCartActive
+        }
     },
     actions: {
         async fetchData({commit}) {
