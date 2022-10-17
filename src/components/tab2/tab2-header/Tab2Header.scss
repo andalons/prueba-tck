@@ -1,15 +1,24 @@
 .tab2-header {
-    display:flex;
-    justify-content: space-between;
-    &__title {
-      color: $secondary-text-color;
-      margin-left: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    color: $secondary-text-color;
+  }
+  &__cart {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    .cart-amount {
+      font-family: "Roboto Slab", serif;
+      font-size: 18px;
+      font-weight: 700;
     }
-    &__icon{
-        cursor:pointer;
-        color: $secondary-text-color;
-        font-size: 20px;
-        margin-right:20px;
-        margin-top:7px;
+    .cart-icon {
+      cursor: pointer;
+      color: $secondary-text-color;
+      font-size: 20px;
     }
   }
+}

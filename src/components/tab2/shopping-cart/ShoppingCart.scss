@@ -1,21 +1,38 @@
 .shopping-cart-container {
-    margin-top:20px;
-    padding:20px;
-    background-color: $white-background;
-    text-align: right;
-    .title {
-        margin-bottom: 50px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $white-background;
+  text-align: right;
+  .title {
+    color: $secondary-text-color;
+    font-family: "Roboto Slab", serif;
+    margin-bottom: 40px;
+  }
+  .empty-cart-message {
+    font-family: "Roboto Slab", serif;
+  }
+  .table {
+    &__header {
+      color: $primary-text-color;
+      font-family: "Roboto Slab", serif;
+      font-size: 17px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
     }
-    .table{
-        list-style: none;
-        &__header {
+    &__body {
+      margin: 20px 0;
+      .items-list {
         display: grid;
-        grid-template-columns: repeat(5, 1fr); 
-        margin-bottom: 20px;
-        }
-        &__item {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr); 
-        }
+        gap: 10px;
+      }
     }
+    &__footer {
+      padding-top: 10px;
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+  }
 }

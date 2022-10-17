@@ -15,6 +15,9 @@ export default createStore({
         setShoppingCart(state, payload){
             state.shoppingCart[payload.id] = payload
         },
+        setEmptyCart(state) {
+            state.shoppingCart = {}
+        },
         setIncrement(state, payload){
             state.shoppingCart[payload].amount++;
         },
@@ -62,12 +65,16 @@ export default createStore({
                 commit('setShoppingCartVisibility')
             }
           },
+          emptyCart ({commit}) {
+            commit ('setEmptyCart')
+          },
           increaseNumberOfItems ({commit}, payload) {
             commit ('setIncrement', payload);
           },
           decreaseNumberOfItems ({commit}, payload) {
             commit ('setDecrement', payload);
           },
+          
           toggleShoppingCart ({commit}) {
             commit ('setShoppingCartVisibility')
           }
@@ -88,7 +95,10 @@ export default createStore({
             // Una vez convertido en array se puede ejecutar sobre este el método reduce. 
             // return Object.values(state.shoppingCart).reduce((acc, shoppingCart) => acc + shoppingCart.amount * shoppingCart.price, 0)
             return Object.values(state.shoppingCart).reduce((acc, {amount, price}) => acc + amount * price, 0)
-          }
+          },
+        getTotalAmount (state){
+            return Object.values(state.shoppingCart).reduce((acc, {amount}) => acc + amount, 0)
+        }
     }
 
 });

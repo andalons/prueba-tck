@@ -1,0 +1,28 @@
+.cart-total {
+  font-size: 17px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  color: $primary-text-color;
+  &__button {
+    grid-column: 1/6;
+    justify-self: end;
+    cursor: pointer;
+    border: 2px solid $secondary-text-color;
+    background-color: $white-background;
+    color: $secondary-text-color;
+    padding: 10px;
+    font-family: "Roboto Slab", serif;
+    font-size: 17px;
+    font-weight: 700;
+    &:hover {
+      background-color: $secondary-text-color;
+      color: $white-background;
+    }
+  }
+  &__title {
+    grid-column: 4/5;
+  }
+  &__price {
+    grid-column: 5/6;
+  }
+}
