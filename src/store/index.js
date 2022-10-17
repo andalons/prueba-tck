@@ -16,10 +16,10 @@ export default createStore({
             state.shoppingCart[payload.id] = payload
         },
         setIncrement(state, payload){
-            state.shoppingCart[payload].amount = state.shoppingCart[payload].amount + 1
+            state.shoppingCart[payload].amount++;
         },
         setDecrement(state, payload){
-            state.shoppingCart[payload].amount = state.shoppingCart[payload].amount - 1
+            state.shoppingCart[payload].amount--;
             if(state.shoppingCart[payload].amount === 0) {delete state.shoppingCart[payload]}
         },
         setShoppingCartVisibility (state) {
