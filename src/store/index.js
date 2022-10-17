@@ -58,6 +58,9 @@ export default createStore({
             ? item.amount = state.shoppingCart[item.id].amount + 1
             : item.amount = 1
             commit('setShoppingCart', item)
+            if(!state.isShoppingCartActive) {
+                commit('setShoppingCartVisibility')
+            }
           },
           increaseNumberOfItems ({commit}, payload) {
             commit ('setIncrement', payload);
