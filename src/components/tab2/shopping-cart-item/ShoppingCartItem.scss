@@ -1,8 +1,6 @@
 .content {
+  margin: 10px 0;
   .amount-col {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     &__button {
       cursor: pointer;
       width: 30px;
@@ -17,6 +15,6 @@
     }
     &__text {
       margin: 0px 10px;
-    }
+    } 
   }
 }
