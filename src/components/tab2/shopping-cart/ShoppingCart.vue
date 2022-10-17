@@ -1,23 +1,22 @@
 <template>
   <div class="shopping-cart-container" v-if="isActive">
     <h4 class="title">Shopping Cart</h4>
-    <table class="table">
-      <thead class="table__header">
-        <tr>
-          <th scope="col" class="">#</th>
-          <th scope="col" class="">Item</th>
-          <th scope="col" class="">Price</th>
-          <th scope="col" class="">Amount</th>
-          <th scope="col" class="">Total</th>
-        </tr>
-      </thead>
-      <tbody class="table__body">
-        <ShoppingCartItem v-for="item in items" :key="item.id" :item="item" />
-      </tbody>
-      <tfoot class="table__footer">
-        <ShoppingCartTotal />
-      </tfoot>
-    </table>
+    <ul class="table">
+      <li class="table__header">
+        <h4 class="">#</h4>
+        <h4 class="">Item</h4>
+        <h4 class="">Price</h4>
+        <h4 class="">Amount</h4>
+        <h4 class="">Total</h4>
+      </li>
+      <ShoppingCartItem
+        class="table__item"
+        v-for="item in items"
+        :key="item.id"
+        :item="item"
+      />
+      <ShoppingCartTotal class="table__footer" />
+    </ul>
   </div>
 </template>
 

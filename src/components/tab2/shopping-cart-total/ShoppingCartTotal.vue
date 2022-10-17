@@ -1,11 +1,11 @@
 <template>
-  <tr>
-    <th scope="row" colspan="4">Total price</th>
-    <td>
+  <li>
+    <h4>Total price</h4>
+    <div>
       <span>{{ totalPrice }}</span
       >€
-    </td>
-  </tr>
+    </div>
+  </li>
 </template>
 
 <script setup>

@@ -1,17 +1,17 @@
 <template>
-  <tr class="content">
-    <th scope="row" class="content__row">{{ item.id }}</th>
-    <td scope="col" class="content__col">{{ item.name }}</td>
-    <td scope="col" class="content_col">{{ item.price }}</td>
-    <td scope="col" class="content__col amount-col">
+  <li class="content">
+    <p class="content__col">{{ item.id }}</p>
+    <p class="content__col">{{ item.name }}</p>
+    <p class="content_col">{{ item.price }}</p>
+    <p class="content__col amount-col">
       <button class="amount-col__button" @click="decrease(item.id)">-</button>
       <span class="amount-col__text">{{ item.amount }}</span>
       <button class="amount-col__button" @click="increase(item.id)">+</button>
-    </td>
-    <td scope="col" class="table-content_col">
+    </p>
+    <p class="table-content_col">
       {{ (item.amount * item.price).toFixed(2) }}
-    </td>
-  </tr>
+    </p>
+  </li>
 </template>
 
 <script setup>
