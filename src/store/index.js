@@ -84,6 +84,9 @@ export default createStore({
         getBeersData(state) {
             return state.beersData;
         },
+        getBeerById: (state) => (id) => {
+            return state.beersData.find(beer => beer.id === parseInt(id))
+          },
         getShoppingCart(state) {
             return state.shoppingCart;
         },

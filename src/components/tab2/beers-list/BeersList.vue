@@ -1,7 +1,6 @@
 <template>
   <section>
     <h2 class="beers-title">Cervezas</h2>
-    <!--   <pre>{{ beersData }}</pre> -->
     <ul class="beers-list">
       <li class="beers-list__item" v-for="beer in beersData" :key="beer.id">
         <BeerCard :beer="beer" />

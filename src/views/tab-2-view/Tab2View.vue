@@ -3,7 +3,6 @@
     <Tab2Header />
     <ShoppingCart />
     <RouterView class="beers-container" />
-    <!--  <BeersList class="beers-container" /> -->
   </section>
 </template>
 
@@ -11,7 +10,6 @@
 import { onMounted } from "vue";
 import { useStore } from "vuex";
 import { RouterView } from "vue-router";
-import BeersList from "../../components/tab2/beers-list/BeersList.vue";
 import ShoppingCart from "../../components/tab2/shopping-cart/ShoppingCart.vue";
 import Tab2Header from "../../components/tab2/tab2-header/Tab2Header.vue";
 

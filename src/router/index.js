@@ -8,7 +8,6 @@ import BeerDetails from '../components/tab2/beer-details/BeerDetails.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  linkActiveClass: 'routerlink-active',
   routes: [
     {
       path: '/',
@@ -22,12 +21,11 @@ const router = createRouter({
     {
       path: '/tab-2',
       name: 'tab-2',
-      /* redirect: 'tab-2/beers', */
       component: Tab2View,
       children: [
         {
           path: 'beers',
-          alias: '',
+          alias: '', 
           name: 'beers-list',
           component: BeersList
         },
@@ -38,11 +36,6 @@ const router = createRouter({
         }
       ]
     }, 
-  /*   {
-      path: '/tab-2/beers/:beerId',
-      name: 'beer-details',
-      component: BeerDetails
-    }, */
     { 
       path:'/:NotFound',
       component: NotFoundView

@@ -1,9 +1,5 @@
 <template>
-  <!--   <RouterLink
-    class="routerlink beer-card-routerlink"
-    :to="`tab-2/beers/${beer.id}`"
-  > -->
-  <article class="beer-card" @click="() => handleClick(beer.id)">
+  <article class="beer-card" @click="() => handleRouterLink(beer.id)">
     <div class="beer-card__img-container">
       <img :src="beer.img" :alt="beer.name" class="image" />
     </div>
@@ -28,7 +24,6 @@
       <button class="btn" @click.stop="addItem(beer)">Add to cart</button>
     </div>
   </article>
-  <!--   </RouterLink> -->
 </template>
 
 <script setup>
@@ -48,7 +43,7 @@ const addItem = (item) => {
   store.dispatch("addItemToCart", item);
 };
 
-const handleClick = (beerId) => {
+const handleRouterLink = (beerId) => {
   router.push(`/tab-2/beers/${beerId}`);
 };
 </script>
