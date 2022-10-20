@@ -12,7 +12,7 @@
 
 <script setup>
 import plansData from "@/data/hotelPlans.json";
-import Plans from "../components/tab1/plans/Plans.vue";
+import Plans from "../../components/tab1/plans/Plans.vue";
 import { ref } from "vue";
 const hotelPlans = ref(plansData);
 </script>

@@ -9,9 +9,10 @@
 <script setup>
 import { onMounted } from "vue";
 import { useStore } from "vuex";
-import BeersList from "../components/tab2/beers-list/BeersList.vue";
-import ShoppingCart from "../components/tab2/shopping-cart/ShoppingCart.vue";
-import Tab2Header from "../components/tab2/tab2-header/Tab2Header.vue";
+import { RouterView } from "vue-router";
+import BeersList from "../../components/tab2/beers-list/BeersList.vue";
+import ShoppingCart from "../../components/tab2/shopping-cart/ShoppingCart.vue";
+import Tab2Header from "../../components/tab2/tab2-header/Tab2Header.vue";
 
 const store = useStore();
 onMounted(async () => {
