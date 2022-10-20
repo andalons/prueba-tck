@@ -20,4 +20,4 @@ onMounted(async () => {
 });
 </script>
 
-<style lang="scss" src="./Tab2.scss"></style>
+<style lang="scss" src="./Tab2View.scss"></style>

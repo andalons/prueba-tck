@@ -17,4 +17,4 @@ import { ref } from "vue";
 const hotelPlans = ref(plansData);
 </script>
 
-<style lang="scss" src="./Tab1.scss"></style>
+<style lang="scss" src="./Tab1View.scss"></style>
