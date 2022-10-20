@@ -1,5 +1,9 @@
 <template>
-  <article class="beer-card">
+  <!--   <RouterLink
+    class="routerlink beer-card-routerlink"
+    :to="`tab-2/beers/${beer.id}`"
+  > -->
+  <article class="beer-card" @click="() => handleClick(beer.id)">
     <div class="beer-card__img-container">
       <img :src="beer.img" :alt="beer.name" class="image" />
     </div>
@@ -21,14 +25,18 @@
     </div>
     <div class="beer-card__abv-container">
       <p class="abv" :class="defineAbvColor(beer.abv)">{{ beer.abv }}</p>
-      <button class="btn" @click="addItem(beer)">Add to cart</button>
+      <button class="btn" @click.stop="addItem(beer)">Add to cart</button>
     </div>
   </article>
+  <!--   </RouterLink> -->
 </template>
 
 <script setup>
 import { useStore } from "vuex";
+import { RouterLink, useRouter } from "vue-router";
+
 const store = useStore();
+const router = useRouter();
 const props = defineProps(["beer"]);
 function defineAbvColor(abv) {
   if (abv <= "5") return "abv--low";
@@ -38,6 +46,10 @@ function defineAbvColor(abv) {
 
 const addItem = (item) => {
   store.dispatch("addItemToCart", item);
+};
+
+const handleClick = (beerId) => {
+  router.push(`/tab-2/beers/${beerId}`);
 };
 </script>
 

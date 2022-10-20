@@ -2,7 +2,8 @@
   <section class="tab2">
     <Tab2Header />
     <ShoppingCart />
-    <BeersList class="beers-container" />
+    <RouterView class="beers-container" />
+    <!--  <BeersList class="beers-container" /> -->
   </section>
 </template>
 

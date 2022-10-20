@@ -19,13 +19,14 @@
         width: 12px;
         height: 12px;
         margin: 2.5px;
-        background-image: url("src/assets/img/estrella.png");
+        /* background-image: url("src/assets/img/estrella.png"); */
+        background-image: url("../../src/assets/img/estrella.png");
       }
     }
   }
   &__container {
-    display:flex;
+    display: flex;
     justify-content: center;
-   flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
